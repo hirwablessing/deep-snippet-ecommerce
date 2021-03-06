@@ -1,5 +1,8 @@
 import React from "react";
-import { StyleSheet, View, Text, Image, Button } from "react-native";
+import { StyleSheet, View, Text, Image } from "react-native";
+
+import colors from "../config/colors";
+import CustomButton from "../components/Button";
 
 function WelcomeScreen() {
   return (
@@ -9,15 +12,28 @@ function WelcomeScreen() {
           style={styles.homeLogo}
           source={require("../assets/app_logo.png")}
         />
-        <View style={styles.loginSignupButtons}>
-          <View style={styles.loginButton}>
-            <Text style={styles.homeTextColor}>Login</Text>
-          </View>
 
-          <View style={styles.signupButton}>
-            <Text style={styles.homeTextColor}>Signup</Text>
-          </View>
-        </View>
+        <CustomButton
+          ourbgColor={"transparent"}
+          buttonMarginBottom={"7%"}
+          buttonPadding={20}
+          buttonWidth={300}
+          buttonBorderWidth={2}
+          buttonRadius={0}
+          title={"Login"}
+          type={"secondary"}
+        />
+
+        <CustomButton
+          ourbgColor={colors.secondary}
+          buttonMarginBottom={"7%"}
+          buttonPadding={20}
+          buttonWidth={300}
+          buttonBorderWidth={2}
+          buttonRadius={0}
+          title={"Signup"}
+          type={"secondary"}
+        />
       </View>
     </>
   );
@@ -26,47 +42,24 @@ function WelcomeScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#010035",
+    backgroundColor: colors.primary,
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
   },
   homeLogo: {
-    // width: "50%",
-    // height: "50%",
-    // marginTop: "50%",
     width: 350,
     height: 350,
-    // position: "absolute",
     left: 60,
-    // flex: 1,
     marginTop: "50%",
     alignItems: "center",
   },
 
-  loginButton: {
-    backgroundColor: "transparent",
-    // width: 40,
-    marginTop: "1%",
-    padding: 20,
-    width: 300,
-    borderWidth: 1,
-    borderColor: "#FF6E4E",
-  },
-
-  signupButton: {
-    backgroundColor: "#FF6E4E",
-    marginTop: 30,
-    padding: 20,
-  },
-
-  loginSignupButtons: {
-    marginBottom: 40,
-  },
   homeTextColor: {
     color: "#fff",
     alignSelf: "center",
+    fontSize: 17,
   },
 });
 
