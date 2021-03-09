@@ -1,9 +1,9 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, ScrollView } from "react-native";
 import {} from "@expo/vector-icons";
-import { Feather } from "@expo/vector-icons";
 
 import colors from "../config/colors";
+import Category from "../components/Category";
 
 export default function HomeStore() {
   return (
@@ -14,13 +14,21 @@ export default function HomeStore() {
         <Text style={styles.viewText}>View all</Text>
       </View>
 
-      <View>
-        <Feather
-          name="smartphone"
-          size={40}
-          color="#B3B3C3"
-          style={styles.categoryLabels}
-        />
+      <View style={{ flexDirection: "row" }}>
+        <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
+          <Category />
+          <Category />
+          <Category />
+          <Category />
+          <Category />
+          <Category />
+          <Category />
+          <Category />
+          <Category />
+          <Category />
+          <Category />
+          <Category />
+        </ScrollView>
       </View>
     </View>
   );
@@ -48,9 +56,14 @@ const styles = StyleSheet.create({
     fontSize: 15,
     fontWeight: "900",
   },
+  categories: {
+    // flexDirection: "row",
+    // flex: 1,
+    marginLeft: 30,
+  },
 
   categoryLabels: {
-    backgroundColor: colors.secondary,
+    backgroundColor: "white",
     borderRadius: 50,
     padding: 18,
     height: 80,
