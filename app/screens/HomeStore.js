@@ -16,7 +16,7 @@ export default function HomeStore() {
       </View>
 
       <View style={{ flexDirection: "row" }}>
-        {/* <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
+        <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
           <Category />
           <Category />
           <Category />
@@ -29,7 +29,11 @@ export default function HomeStore() {
           <Category />
           <Category />
           <Category />
-        </ScrollView> */}
+          <Category />
+          <Category />
+          <Category />
+          <Category />
+        </ScrollView>
       </View>
 
       <Search />

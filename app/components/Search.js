@@ -5,7 +5,7 @@ import colors from "../config/colors";
 
 export default function Search() {
   return (
-    <View style={{ flexDirection: "row" }}>
+    <View style={{ flexDirection: "row", marginTop: 10 }}>
       <View style={styles.SectionStyle}>
         <EvilIcons
           name="search"
@@ -48,16 +48,12 @@ const styles = StyleSheet.create({
   ImageStyle: {
     padding: 5,
     margin: 5,
-    // height: 45,
-    // width: 45,
-
-    // resizeMode: "stretch",
+    resizeMode: "stretch",
     alignItems: "center",
   },
   searchIcon: {
     backgroundColor: colors.secondary,
     padding: 5,
-    // alignItems: "center",
     width: 45,
     height: 45,
     borderRadius: 50,

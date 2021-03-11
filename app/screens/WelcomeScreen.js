@@ -15,8 +15,8 @@ function WelcomeScreen() {
 
         <CustomButton
           ourbgColor={"transparent"}
-          buttonMarginBottom={"7%"}
-          buttonPadding={20}
+          buttonMarginBottom={"15%"}
+          buttonPadding={15}
           buttonWidth={300}
           buttonBorderWidth={2}
           buttonRadius={0}
@@ -27,7 +27,7 @@ function WelcomeScreen() {
         <CustomButton
           ourbgColor={colors.secondary}
           buttonMarginBottom={"7%"}
-          buttonPadding={20}
+          buttonPadding={15}
           buttonWidth={300}
           buttonBorderWidth={2}
           buttonRadius={0}
