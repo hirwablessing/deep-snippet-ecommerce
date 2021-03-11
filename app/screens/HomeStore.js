@@ -4,6 +4,7 @@ import {} from "@expo/vector-icons";
 
 import colors from "../config/colors";
 import Category from "../components/Category";
+import Search from "../components/Search";
 
 export default function HomeStore() {
   return (
@@ -15,7 +16,7 @@ export default function HomeStore() {
       </View>
 
       <View style={{ flexDirection: "row" }}>
-        <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
+        {/* <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
           <Category />
           <Category />
           <Category />
@@ -28,8 +29,10 @@ export default function HomeStore() {
           <Category />
           <Category />
           <Category />
-        </ScrollView>
+        </ScrollView> */}
       </View>
+
+      <Search />
     </View>
   );
 }

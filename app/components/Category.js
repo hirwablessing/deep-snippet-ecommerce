@@ -1,12 +1,5 @@
 import React, { useState } from "react";
-import {
-  StyleSheet,
-  Text,
-  TouchableHighlight,
-  TouchableWithoutFeedback,
-  TouchableWithoutFeedbackBase,
-  View,
-} from "react-native";
+import { StyleSheet, Text, TouchableWithoutFeedback, View } from "react-native";
 
 import { Feather } from "@expo/vector-icons";
 import colors from "../config/colors";
