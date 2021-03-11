@@ -5,7 +5,7 @@ import colors from "../config/colors";
 
 export default function Search() {
   return (
-    <View style={{ flexDirection: "row", marginTop: 10 }}>
+    <View style={{ flexDirection: "row", marginTop: 20 }}>
       <View style={styles.SectionStyle}>
         <EvilIcons
           name="search"

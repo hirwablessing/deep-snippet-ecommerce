@@ -5,6 +5,7 @@ import {} from "@expo/vector-icons";
 import colors from "../config/colors";
 import Category from "../components/Category";
 import Search from "../components/Search";
+import { Image } from "react-native";
 
 export default function HomeStore() {
   return (
@@ -37,6 +38,20 @@ export default function HomeStore() {
       </View>
 
       <Search />
+
+      <View style={styles.homeHeader}>
+        <Text style={styles.categoryText}>Hot Sales</Text>
+
+        <Text style={styles.viewText}>See more</Text>
+      </View>
+
+      <View>
+        <Image
+          style={styles.homeLogo}
+          source={require("../assets/iphone1.png")}
+          style={styles.storeLogo}
+        />
+      </View>
     </View>
   );
 }
@@ -47,10 +62,10 @@ const styles = StyleSheet.create({
     backgroundColor: colors.mainScreen,
   },
   homeHeader: {
-    marginTop: 50,
     flexDirection: "row",
     justifyContent: "space-between",
-    margin: 30,
+    margin: 20,
+    marginLeft: 15,
     alignItems: "baseline",
   },
   categoryText: {
@@ -78,5 +93,10 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     marginLeft: 30,
+  },
+  storeLogo: {
+    width: 370,
+    height: 182,
+    marginLeft: 10,
   },
 });
