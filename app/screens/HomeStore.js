@@ -6,15 +6,16 @@ import colors from "../config/colors";
 import Category from "../components/Category";
 import Search from "../components/Search";
 import { Image } from "react-native";
+import ContentTitle from "../components/ContentTitle";
 
 export default function HomeStore() {
   return (
     <View style={styles.homeStore}>
-      <View style={styles.homeHeader}>
-        <Text style={styles.categoryText}>Select Category</Text>
-
-        <Text style={styles.viewText}>View all</Text>
-      </View>
+      <ContentTitle
+        leftText={"Select Category"}
+        rightText={"View all"}
+        titleMargin={50}
+      />
 
       <View style={{ flexDirection: "row" }}>
         <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
@@ -39,11 +40,11 @@ export default function HomeStore() {
 
       <Search />
 
-      <View style={styles.homeHeader}>
-        <Text style={styles.categoryText}>Hot Sales</Text>
-
-        <Text style={styles.viewText}>See more</Text>
-      </View>
+      <ContentTitle
+        leftText={"Hot sales"}
+        rightText={"See more"}
+        titleMargin={10}
+      />
 
       <View>
         <Image
@@ -61,23 +62,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: colors.mainScreen,
   },
-  homeHeader: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    margin: 20,
-    marginLeft: 15,
-    alignItems: "baseline",
-  },
-  categoryText: {
-    color: colors.primary,
-    fontSize: 20,
-    fontWeight: "900",
-  },
-  viewText: {
-    color: colors.secondary,
-    fontSize: 15,
-    fontWeight: "900",
-  },
+
   categories: {
     // flexDirection: "row",
     // flex: 1,
