@@ -42,17 +42,22 @@ export default function HomeStore() {
 
       <ContentTitle
         leftText={"Hot sales"}
-        rightText={"See more"}
+        rightText={"see more"}
         titleMargin={10}
       />
 
       <View>
         <Image
-          style={styles.homeLogo}
           source={require("../assets/iphone1.png")}
           style={styles.storeLogo}
         />
       </View>
+
+      <ContentTitle
+        leftText={"Best Seller"}
+        rightText={"see more"}
+        titleMargin={15}
+      />
     </View>
   );
 }

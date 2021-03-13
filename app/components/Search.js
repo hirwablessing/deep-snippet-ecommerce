@@ -1,6 +1,6 @@
 import React from "react";
 import { StyleSheet, TextInput, View } from "react-native";
-import { EvilIcons, Feather } from "@expo/vector-icons";
+import { EvilIcons, Feather, MaterialCommunityIcons } from "@expo/vector-icons";
 import colors from "../config/colors";
 
 export default function Search() {
@@ -21,12 +21,13 @@ export default function Search() {
         />
       </View>
       <View style={styles.searchIcon}>
-        <Feather
+        <MaterialCommunityIcons name="sort-variant" size={30} color="white" />
+        {/* <Feather
           name="chevron-right"
           size={24}
           color="white"
           style={{ alignSelf: "center", marginTop: 5 }}
-        />
+        /> */}
       </View>
     </View>
   );
@@ -58,5 +59,7 @@ const styles = StyleSheet.create({
     height: 45,
     borderRadius: 50,
     marginTop: 10,
+    justifyContent: "center",
+    alignItems: "center",
   },
 });
