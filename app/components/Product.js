@@ -4,9 +4,10 @@ import { Image } from "react-native";
 import { StyleSheet, Text, View } from "react-native";
 
 import { EvilIcons } from "@expo/vector-icons";
+import colors from "../config/colors";
 
 const { width } = Dimensions.get("screen");
-const cardWidth = width / 1.8;
+const cardWidth = width / 2.3;
 
 export default function Product() {
   return (
@@ -19,7 +20,14 @@ export default function Product() {
         style={styles.productImage}
       />
 
-      <View style={styles.productDetails}></View>
+      <View style={styles.productDetails}>
+        <View style={styles.productMenus}>
+          <Text style={styles.productPrice}>$1,047</Text>
+          <Text style={styles.productDescription}>
+            Samsung Galaxy s20 Ultra
+          </Text>
+        </View>
+      </View>
     </View>
   );
 }
@@ -27,16 +35,15 @@ export default function Product() {
 const styles = StyleSheet.create({
   productCard: {
     width: cardWidth,
-    height: 350,
-    elevation: 10,
+    height: 300, //350
+    elevation: 2,
     borderRadius: 10,
     backgroundColor: "white",
     marginLeft: 20,
-    marginTop: "50%",
   },
   productImage: {
     width: "100%",
-    height: 200,
+    height: 190,
     marginTop: 15,
   },
   likeTag: {
@@ -49,18 +56,33 @@ const styles = StyleSheet.create({
     zIndex: 1,
     right: 0,
     top: 5,
-    right: 10,
+    right: 5, //10
     justifyContent: "center",
     alignItems: "center",
   },
 
   productDetails: {
     height: 100,
-    borderRadius: 15,
+    borderRadius: 10,
     backgroundColor: "white",
     position: "absolute",
     bottom: 0,
     paddingLeft: 20,
     width: "100%",
+  },
+  productMenus: {
+    marginTop: 20, //20
+    flexDirection: "column",
+    lineHeight: 10,
+  },
+  productPrice: {
+    color: colors.primary,
+    fontWeight: "bold",
+    fontSize: 20,
+    marginBottom: 5,
+  },
+  productDescription: {
+    color: colors.primary,
+    fontSize: 15,
   },
 });

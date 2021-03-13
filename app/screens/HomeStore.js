@@ -7,57 +7,66 @@ import Category from "../components/Category";
 import Search from "../components/Search";
 import { Image } from "react-native";
 import ContentTitle from "../components/ContentTitle";
+import Product from "../components/Product";
 
 export default function HomeStore() {
   return (
     <View style={styles.homeStore}>
-      <ContentTitle
-        leftText={"Select Category"}
-        rightText={"View all"}
-        titleMargin={50}
-      />
-
-      <View style={{ flexDirection: "row" }}>
-        <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
-          <Category />
-          <Category />
-          <Category />
-          <Category />
-          <Category />
-          <Category />
-          <Category />
-          <Category />
-          <Category />
-          <Category />
-          <Category />
-          <Category />
-          <Category />
-          <Category />
-          <Category />
-          <Category />
-        </ScrollView>
-      </View>
-
-      <Search />
-
-      <ContentTitle
-        leftText={"Hot sales"}
-        rightText={"see more"}
-        titleMargin={10}
-      />
-
-      <View>
-        <Image
-          source={require("../assets/iphone1.png")}
-          style={styles.storeLogo}
+      <ScrollView horizontal={false} showsHorizontalScrollIndicator={false}>
+        <ContentTitle
+          leftText={"Select Category"}
+          rightText={"View all"}
+          titleMargin={50}
         />
-      </View>
 
-      <ContentTitle
-        leftText={"Best Seller"}
-        rightText={"see more"}
-        titleMargin={15}
-      />
+        <View style={{ flexDirection: "row" }}>
+          <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
+            <Category />
+            <Category />
+            <Category />
+            <Category />
+            <Category />
+            <Category />
+            <Category />
+            <Category />
+            <Category />
+            <Category />
+            <Category />
+            <Category />
+            <Category />
+            <Category />
+            <Category />
+            <Category />
+          </ScrollView>
+        </View>
+
+        <Search />
+
+        <ContentTitle
+          leftText={"Hot sales"}
+          rightText={"see more"}
+          titleMargin={10}
+        />
+
+        <View>
+          <Image
+            source={require("../assets/iphone1.png")}
+            style={styles.storeLogo}
+          />
+        </View>
+
+        <ContentTitle
+          leftText={"Best Seller"}
+          rightText={"see more"}
+          titleMargin={15}
+        />
+        <View style={{ flex: 1, flexDirection: "row" }}>
+          <Product />
+          <Product />
+          <Product />
+          <Product />
+        </View>
+      </ScrollView>
     </View>
   );
 }
