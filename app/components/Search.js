@@ -11,6 +11,7 @@ export default function Search() {
           name="search"
           size={30}
           color={colors.secondary}
+          resizeMode="cover"
           style={styles.ImageStyle}
         />
 
@@ -22,12 +23,6 @@ export default function Search() {
       </View>
       <View style={styles.searchIcon}>
         <MaterialCommunityIcons name="sort-variant" size={30} color="white" />
-        {/* <Feather
-          name="chevron-right"
-          size={24}
-          color="white"
-          style={{ alignSelf: "center", marginTop: 5 }}
-        /> */}
       </View>
     </View>
   );
@@ -49,7 +44,7 @@ const styles = StyleSheet.create({
   ImageStyle: {
     padding: 5,
     margin: 5,
-    resizeMode: "stretch",
+    // resizeMode: "stretch",
     alignItems: "center",
   },
   searchIcon: {

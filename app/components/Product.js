@@ -1,24 +1,36 @@
-import React from "react";
+import React, { useState } from "react";
 import { Dimensions } from "react-native";
 import { Image } from "react-native";
-import { StyleSheet, Text, View } from "react-native";
+import { TouchableWithoutFeedback, StyleSheet, Text, View } from "react-native";
 
 import { EvilIcons } from "@expo/vector-icons";
+import { AntDesign } from "@expo/vector-icons";
 import colors from "../config/colors";
+import DoubleTap from "./DoubleTap";
 
 const { width } = Dimensions.get("screen");
 const cardWidth = width / 2.3;
 
 export default function Product() {
+  const [liked, setLiked] = useState(false);
+
+  const toggleLike = () => setLiked(!liked);
+
   return (
     <View style={styles.productCard}>
       <View style={styles.likeTag}>
-        <EvilIcons name="heart" size={30} color="#FF6E4E" />
+        {liked ? (
+          <AntDesign name="heart" size={20} color="#FF6E4E" />
+        ) : (
+          <EvilIcons name="heart" size={30} color="#FF6E4E" />
+        )}
       </View>
-      <Image
-        source={require("../assets/image.png")}
-        style={styles.productImage}
-      />
+      <DoubleTap onDoubleTap={toggleLike}>
+        <Image
+          source={require("../assets/image.png")}
+          style={styles.productImage}
+        />
+      </DoubleTap>
 
       <View style={styles.productDetails}>
         <View style={styles.productMenus}>
@@ -36,10 +48,11 @@ const styles = StyleSheet.create({
   productCard: {
     width: cardWidth,
     height: 300, //350
-    elevation: 2,
+    // elevation: 5,
     borderRadius: 10,
     backgroundColor: "white",
     marginLeft: 20,
+    marginTop: 20,
   },
   productImage: {
     width: "100%",
@@ -77,7 +90,7 @@ const styles = StyleSheet.create({
   },
   productPrice: {
     color: colors.primary,
-    fontWeight: "bold",
+    fontWeight: "900",
     fontSize: 20,
     marginBottom: 5,
   },

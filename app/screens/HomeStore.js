@@ -20,7 +20,7 @@ export default function HomeStore() {
         />
 
         <View style={{ flexDirection: "row" }}>
-          <ScrollView horizontal={true} showsVerticalScrollIndicator={false}>
+          <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
             <Category />
             <Category />
             <Category />
@@ -51,7 +51,7 @@ export default function HomeStore() {
         <View>
           <Image
             source={require("../assets/iphone1.png")}
-            style={styles.storeLogo}
+            style={styles.homeStoreImg}
           />
         </View>
 
@@ -60,7 +60,7 @@ export default function HomeStore() {
           rightText={"see more"}
           titleMargin={15}
         />
-        <View style={{ flex: 1, flexDirection: "row" }}>
+        <View style={{ flex: 1, flexDirection: "row", flexWrap: "wrap" }}>
           <Product />
           <Product />
           <Product />
@@ -93,8 +93,8 @@ const styles = StyleSheet.create({
     alignItems: "center",
     marginLeft: 30,
   },
-  storeLogo: {
-    width: 370,
+  homeStoreImg: {
+    width: "95%",
     height: 182,
     marginLeft: 10,
   },
