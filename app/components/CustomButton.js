@@ -5,14 +5,14 @@ import { useFonts, Inter_900Black } from "@expo-google-fonts/inter";
 import colors from "../config/colors";
 
 export default function CustomButton({
-  ourbgColor,
+  bgColor,
   buttonMarginBottom,
   buttonPadding,
   buttonWidth,
   buttonBorderWidth,
   buttonRadius,
   title,
-  type,
+  buttonBorderColor,
 }) {
   useFonts({
     Inter_900Black,
@@ -21,13 +21,15 @@ export default function CustomButton({
   const styles = StyleSheet.create({
     button: {
       //   flex: 1,
-      backgroundColor: ourbgColor,
+      backgroundColor: bgColor,
       marginBottom: buttonMarginBottom,
       padding: buttonPadding,
       width: buttonWidth,
       borderWidth: buttonBorderWidth,
       borderRadius: buttonRadius,
-      borderColor: type ? colors[type] : "transparent",
+      borderColor: buttonBorderColor
+        ? colors[buttonBorderColor]
+        : "transparent",
     },
 
     buttonTextColor: {

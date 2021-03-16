@@ -20,7 +20,7 @@ export default function HomeStore() {
         />
 
         <View style={{ flexDirection: "row" }}>
-          <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
+          <ScrollView horizontal={true} showsVerticalScrollIndicator={false}>
             <Category />
             <Category />
             <Category />
