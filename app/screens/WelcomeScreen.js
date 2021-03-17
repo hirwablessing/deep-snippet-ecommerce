@@ -15,24 +15,24 @@ function WelcomeScreen() {
 
         <CustomButton
           bgColor={"transparent"}
-          buttonMarginBottom={"15%"}
+          buttonMarginBottom={"10%"}
           buttonPadding={15}
           buttonWidth={300}
           buttonBorderWidth={2}
           buttonRadius={0}
           title={"Login"}
-          type={"secondary"}
+          buttonBorderColor={"secondary"}
         />
 
         <CustomButton
-          ourbgColor={colors.secondary}
+          bgColor={colors.secondary}
           buttonMarginBottom={"7%"}
           buttonPadding={15}
           buttonWidth={300}
           buttonBorderWidth={2}
           buttonRadius={0}
           title={"Signup"}
-          buttonBorderColor={"secondary"}
+          buttonBorderColor={"transparent"}
         />
       </View>
     </>

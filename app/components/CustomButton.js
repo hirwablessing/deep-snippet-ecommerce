@@ -1,6 +1,5 @@
 import React from "react";
 import { StyleSheet, Text, TouchableOpacity } from "react-native";
-import { useFonts, Inter_900Black } from "@expo-google-fonts/inter";
 
 import colors from "../config/colors";
 
@@ -14,10 +13,6 @@ export default function CustomButton({
   title,
   buttonBorderColor,
 }) {
-  useFonts({
-    Inter_900Black,
-  });
-
   const styles = StyleSheet.create({
     button: {
       //   flex: 1,
@@ -36,7 +31,6 @@ export default function CustomButton({
       color: "#fff",
       alignSelf: "center",
       fontSize: 17,
-      fontFamily: "Inter_900Black",
     },
   });
   return (

@@ -1,15 +1,16 @@
 import React, { useState } from "react";
 import { Dimensions } from "react-native";
 import { Image } from "react-native";
-import { TouchableWithoutFeedback, StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 
 import { EvilIcons } from "@expo/vector-icons";
 import { AntDesign } from "@expo/vector-icons";
+
 import colors from "../config/colors";
 import DoubleTap from "./DoubleTap";
 
 const { width } = Dimensions.get("screen");
-const cardWidth = width / 2.3;
+const cardWidth = width / 2.2;
 
 export default function Product() {
   const [liked, setLiked] = useState(false);
@@ -50,7 +51,7 @@ const styles = StyleSheet.create({
     height: 300, //350
     // elevation: 5,
     borderRadius: 10,
-    backgroundColor: "white",
+    backgroundColor: colors.white,
     marginLeft: 20,
     marginTop: 20,
   },
@@ -60,7 +61,7 @@ const styles = StyleSheet.create({
     marginTop: 15,
   },
   likeTag: {
-    backgroundColor: "white",
+    backgroundColor: colors.white,
     elevation: 1,
     borderRadius: 50,
     height: 40,
@@ -77,7 +78,7 @@ const styles = StyleSheet.create({
   productDetails: {
     height: 100,
     borderRadius: 10,
-    backgroundColor: "white",
+    backgroundColor: colors.white,
     position: "absolute",
     bottom: 0,
     paddingLeft: 20,
@@ -97,5 +98,6 @@ const styles = StyleSheet.create({
   productDescription: {
     color: colors.primary,
     fontSize: 15,
+    // width: "100%",
   },
 });

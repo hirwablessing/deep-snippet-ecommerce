@@ -10,7 +10,7 @@ export default function DoubleTap(props) {
   let lastTap = null;
   const handleDoubleTap = () => {
     const now = Date.now();
-    if (lastTap && now - lastTap < (defaultProps.delay || props.delay)) {
+    if (lastTap && now - lastTap < (props.delay || defaultProps.delay)) {
       props.onDoubleTap() || defaultProps.onDoubleTap();
     } else {
       lastTap = now;

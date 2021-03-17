@@ -1,11 +1,10 @@
 import React from "react";
 import { StyleSheet, Text, View, ScrollView } from "react-native";
-import {} from "@expo/vector-icons";
+import { Image } from "react-native";
 
 import colors from "../config/colors";
 import Category from "../components/Category";
 import Search from "../components/Search";
-import { Image } from "react-native";
 import ContentTitle from "../components/ContentTitle";
 import Product from "../components/Product";
 
@@ -84,7 +83,7 @@ const styles = StyleSheet.create({
   },
 
   categoryLabels: {
-    backgroundColor: "white",
+    backgroundColor: colors.white,
     borderRadius: 50,
     padding: 18,
     height: 80,
