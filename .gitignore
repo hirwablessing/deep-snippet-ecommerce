@@ -14,3 +14,4 @@ web-build/
 
 #dependencies files
 *.lock
+*.log
