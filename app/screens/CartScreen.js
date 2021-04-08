@@ -34,7 +34,11 @@ export default function CartScreen() {
           />
         </View> */}
 
-        <CheckoutProduct />
+        <CheckoutProduct
+          image={require("../assets/samsung.png")}
+          title="Galaxy Note 20 Ultra"
+          price={500}
+        />
       </View>
     </View>
   );

@@ -4,21 +4,18 @@ import { Image } from "react-native-elements/dist/image/Image";
 
 import colors from "../config/colors";
 
-export default function CheckoutProduct() {
+export default function CheckoutProduct({ image, title, price }) {
   return (
     <View style={styles.product__info}>
       <View style={styles.product__description}>
-        <Image
-          source={require("../assets/samsung.png")}
-          style={styles.product__image}
-        />
+        <Image source={image} style={styles.product__image} />
 
         <View>
           <Text style={{ color: colors.white, width: 100, marginBottom: 10 }}>
-            Galaxy Note 20 Ultra
+            {title}
           </Text>
 
-          <Text style={{ color: colors.secondary }}>$4000</Text>
+          <Text style={{ color: colors.secondary }}>${price}</Text>
         </View>
       </View>
 
