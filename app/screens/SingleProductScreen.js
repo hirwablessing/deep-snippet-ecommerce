@@ -164,21 +164,4 @@ const styles = StyleSheet.create({
     width: "100%",
     justifyContent: "space-between",
   },
-  button: {
-    backgroundColor: "blue",
-    paddingVertical: 10,
-    paddingHorizontal: 25,
-    alignItems: "center",
-    borderRadius: 5,
-  },
-  buttonText: {
-    fontWeight: "bold",
-    color: colors.white,
-  },
-  heading: {
-    marginLeft: 20,
-    color: "#2E0B5B",
-    fontWeight: "bold",
-    fontSize: 18,
-  },
 });
