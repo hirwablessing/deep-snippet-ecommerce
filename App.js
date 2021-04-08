@@ -1,23 +1,25 @@
-// import React from "react";
-// import BottomNavigator from "./app/components/BottomNavigator";
-// import Product from "./app/components/Product";
-// import HomeStore from "./app/screens/HomeStore";
-// import WelcomeScreen from "./app/screens/WelcomeScreen";
+import React from "react";
+import BottomNavigator from "./app/components/BottomNavigator";
+import Product from "./app/components/Product";
+import HomeStore from "./app/screens/HomeStore";
+import WelcomeScreen from "./app/screens/WelcomeScreen";
 
-// import { NavigationContainer } from "@react-navigation/native";
-// import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { NavigationContainer } from "@react-navigation/native";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import SingleProductScreen from "./app/screens/SingleProductScreen";
 
-// export default function App() {
-//   return (
-//     <>
-//       <AppContainer />
-//       <BottomNavigator />
-//       <HomeStore />
-//       <WelcomeScreen />
-//       <Product />
-//     </>
-//   );
-// }
+export default function App() {
+  return (
+    <>
+      {/* <HomeStore /> */}
+      <SingleProductScreen
+        image={require("./app/assets/image.png")}
+        title="Samsung S20 Ultra"
+        price={456}
+      />
+    </>
+  );
+}
 
 // const bottomTabNavigator = createBottomTabNavigator(
 //   {
@@ -157,28 +159,28 @@
 //   }
 // );
 
-import * as React from "react";
-import { Text, View } from "react-native";
-import { NavigationContainer } from "@react-navigation/native";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import HomeStore from "./app/screens/HomeStore";
-import WelcomeScreen from "./app/screens/WelcomeScreen";
+// import * as React from "react";
+// import { Text, View } from "react-native";
+// import { NavigationContainer } from "@react-navigation/native";
+// import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+// import HomeStore from "./app/screens/HomeStore";
+// import WelcomeScreen from "./app/screens/WelcomeScreen";
 
-const Tab = createBottomTabNavigator();
+// const Tab = createBottomTabNavigator();
 
-function MyTabs() {
-  return (
-    <Tab.Navigator>
-      <Tab.Screen name="Welcome" component={WelcomeScreen} />
-      <Tab.Screen name="HomeStore" component={HomeStore} />
-    </Tab.Navigator>
-  );
-}
+// function MyTabs() {
+//   return (
+//     <Tab.Navigator>
+//       <Tab.Screen name="Welcome" component={WelcomeScreen} />
+//       <Tab.Screen name="HomeStore" component={HomeStore} />
+//     </Tab.Navigator>
+//   );
+// }
 
-export default function App() {
-  return (
-    <NavigationContainer>
-      <MyTabs />
-    </NavigationContainer>
-  );
-}
+// export default function App() {
+//   return (
+//     <NavigationContainer>
+//       <MyTabs />
+//     </NavigationContainer>
+//   );
+// }

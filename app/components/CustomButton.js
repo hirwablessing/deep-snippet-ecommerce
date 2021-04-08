@@ -12,6 +12,7 @@ export default function CustomButton({
   buttonRadius,
   title,
   buttonBorderColor,
+  btnTextColor,
 }) {
   const styles = StyleSheet.create({
     button: {
@@ -22,15 +23,16 @@ export default function CustomButton({
       width: buttonWidth,
       borderWidth: buttonBorderWidth,
       borderRadius: buttonRadius,
-      borderColor: buttonBorderColor
-        ? colors[buttonBorderColor]
-        : "transparent",
+      borderColor: buttonBorderColor,
+      // ? colors[buttonBorderColor]
+      // : "transparent",
     },
 
     buttonTextColor: {
-      color: "#fff",
+      color: btnTextColor ? btnTextColor : colors.white,
       alignSelf: "center",
       fontSize: 17,
+      // textTransform: "capitalize",
     },
   });
   return (

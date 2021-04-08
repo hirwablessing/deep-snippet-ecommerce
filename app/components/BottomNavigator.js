@@ -4,7 +4,7 @@ import { View, Text } from "react-native";
 export default function BottomNavigator() {
   return (
     <View>
-      <Text>Hi ther</Text>
+      <Text>Hi there</Text>
     </View>
   );
 }

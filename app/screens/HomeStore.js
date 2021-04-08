@@ -7,6 +7,7 @@ import Category from "../components/Category";
 import Search from "../components/Search";
 import ContentTitle from "../components/ContentTitle";
 import Product from "../components/Product";
+import { EvilIcons } from "@expo/vector-icons";
 
 export default function HomeStore() {
   return (
