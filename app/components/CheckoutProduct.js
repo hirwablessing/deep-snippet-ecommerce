@@ -13,7 +13,7 @@ export default function CheckoutProduct() {
           style={styles.product__image}
         />
 
-        <View style={styles.product__description}>
+        <View>
           <Text style={{ color: colors.white, width: 100, marginBottom: 10 }}>
             Galaxy Note 20 Ultra
           </Text>
@@ -22,12 +22,20 @@ export default function CheckoutProduct() {
         </View>
       </View>
 
-      <View style={styles.product__quantity}>
-        <Text style={styles.product__sign}>1</Text>
-        <Text style={styles.product__sign}>2</Text>
-        <Text style={styles.product__sign}>+</Text>
+      <View style={styles.product__operations}>
+        <View style={styles.product__quantity}>
+          <Text style={styles.product__sign}>1</Text>
+          <Text style={styles.product__sign}>2</Text>
+          <Text style={styles.product__sign}>+</Text>
+        </View>
+        <Text
+          style={{
+            color: colors.white,
+          }}
+        >
+          Delete
+        </Text>
       </View>
-      <Text style={{ alignItems: "center", alignSelf: "center" }}>Delete</Text>
     </View>
   );
 }
@@ -61,8 +69,15 @@ const styles = StyleSheet.create({
     borderRadius: 26,
     justifyContent: "center",
     alignItems: "center",
+    marginRight: 10,
   },
   product__sign: {
     color: colors.white,
+  },
+
+  product__operations: {
+    justifyContent: "space-evenly",
+    flexDirection: "row",
+    alignItems: "center",
   },
 });
