@@ -1,6 +1,7 @@
 export default {
   primary: "#010035",
   secondary: "#FF6E4E",
-  mainScreen: "#f8f8f8",
+  mainScreen: "#F8F8F8",
   white: "#FFFF",
+  black: "#282843",
 };

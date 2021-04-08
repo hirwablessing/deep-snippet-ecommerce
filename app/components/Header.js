@@ -2,7 +2,7 @@ import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 import colors from "../config/colors";
 
-export default function ContentTitle({ leftText, rightText, titleMargin }) {
+export default function Header({ leftText, rightText, titleMargin }) {
   const styles = StyleSheet.create({
     homeHeader: {
       flexDirection: "row",

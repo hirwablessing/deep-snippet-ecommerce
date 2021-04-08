@@ -7,16 +7,20 @@ import WelcomeScreen from "./app/screens/WelcomeScreen";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import SingleProductScreen from "./app/screens/SingleProductScreen";
+import HeaderNavigation from "./app/components/HeaderNavigation";
+import CartScreen from "./app/screens/CartScreen";
 
 export default function App() {
   return (
     <>
       {/* <HomeStore /> */}
-      <SingleProductScreen
+      {/* <SingleProductScreen
         image={require("./app/assets/image.png")}
         title="Samsung S20 Ultra"
         price={456}
-      />
+      /> */}
+
+      <CartScreen />
     </>
   );
 }

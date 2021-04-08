@@ -5,7 +5,7 @@ import { Image } from "react-native";
 import colors from "../config/colors";
 import Category from "../components/Category";
 import Search from "../components/Search";
-import ContentTitle from "../components/ContentTitle";
+import Header from "../components/Header";
 import Product from "../components/Product";
 import { EvilIcons } from "@expo/vector-icons";
 
@@ -13,7 +13,7 @@ export default function HomeStore() {
   return (
     <View style={styles.homeStore}>
       <ScrollView horizontal={false} showsHorizontalScrollIndicator={false}>
-        <ContentTitle
+        <Header
           leftText={"Select Category"}
           rightText={"View all"}
           titleMargin={50}
@@ -42,7 +42,7 @@ export default function HomeStore() {
 
         <Search />
 
-        <ContentTitle
+        <Header
           leftText={"Hot sales"}
           rightText={"see more"}
           titleMargin={10}
@@ -55,7 +55,7 @@ export default function HomeStore() {
           />
         </View>
 
-        <ContentTitle
+        <Header
           leftText={"Best Seller"}
           rightText={"see more"}
           titleMargin={15}
