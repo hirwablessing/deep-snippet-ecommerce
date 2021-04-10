@@ -4,16 +4,23 @@ import { StyleSheet, Text, View } from "react-native";
 import colors from "../config/colors";
 import HeaderNavigation from "../components/HeaderNavigation";
 import { Image } from "react-native-elements";
+
 import CheckoutProduct from "../components/CheckoutProduct";
+import { Feather } from "@expo/vector-icons";
 
 export default function CartScreen() {
   return (
     <View style={{ flex: 1, backgroundColor: colors.mainScreen }}>
       <HeaderNavigation
-        leftIcon={"<"}
-        navigationHeaderTitle={"Add addre"}
-        rightIcon={">"}
-        titleMargin={50}
+        navigationHeaderTitle={"Add address"}
+        rightIcon={
+          <Feather
+            name="map-pin"
+            size={20}
+            color="white"
+            style={{ alignSelf: "center" }}
+          />
+        }
       />
       <Text style={{ fontSize: 35, marginHorizontal: 40, marginVertical: 50 }}>
         My Cart
@@ -27,26 +34,33 @@ export default function CartScreen() {
           borderTopLeftRadius: 50,
         }}
       >
-        {/* <View style={styles}>
-          <Image
-            source={require("../assets/iPhone.png")}
-            style={styles.productImage}
+        <View style={{ marginTop: 70 }}>
+          <CheckoutProduct
+            image={require("../assets/samsung.png")}
+            title="Galaxy Note 20 Ultra"
+            price={500}
           />
-        </View> */}
+          <CheckoutProduct
+            image={require("../assets/samsung.png")}
+            title="Galaxy Note 20 Ultra"
+            price={500}
+          />
+        </View>
 
-        <CheckoutProduct
-          image={require("../assets/samsung.png")}
-          title="Galaxy Note 20 Ultra"
-          price={500}
-        />
+        <View style={styles.card__total}></View>
       </View>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  productImage: {
-    width: 111,
-    height: 89,
+  card__total: {
+    flex: 1,
+    marginTop: 70,
+    backgroundColor: colors.secondary,
+    borderTopWidth: 1,
+    borderTopColor: colors.white,
+    borderBottomWidth: 1,
+    borderBottomColor: colors.white,
   },
 });

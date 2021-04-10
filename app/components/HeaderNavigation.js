@@ -1,15 +1,26 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
-import colors from "../config/colors";
 
-export default function HeaderNavigation({ leftText, rightText, titleMargin }) {
+import colors from "../config/colors";
+import { AntDesign } from "@expo/vector-icons";
+
+export default function HeaderNavigation({ navigationHeaderTitle, rightIcon }) {
   return (
     <View style={styles.homeHeader}>
-      <View style={styles.leftNavigationIcon}></View>
+      <View style={styles.leftNavigationIcon}>
+        <AntDesign
+          name="left"
+          size={17}
+          color="white"
+          style={{
+            alignSelf: "center",
+          }}
+        />
+      </View>
 
       <View style={styles.rightContent}>
-        <Text style={styles.rightText}>Add address</Text>
-        <View style={styles.rightNavigationIcon}></View>
+        <Text style={styles.rightText}>{navigationHeaderTitle}</Text>
+        <View style={styles.rightNavigationIcon}>{rightIcon}</View>
       </View>
     </View>
   );
@@ -31,13 +42,17 @@ const styles = StyleSheet.create({
     height: 37,
     width: 37,
     backgroundColor: colors.primary,
-    borderRadius: 5,
+    borderRadius: 10,
+    alignItems: "center",
+    justifyContent: "center",
   },
   rightNavigationIcon: {
     height: 37,
     width: 37,
     backgroundColor: colors.secondary,
     borderRadius: 10,
+    alignItems: "center",
+    justifyContent: "center",
   },
   homeHeader: {
     flexDirection: "row",

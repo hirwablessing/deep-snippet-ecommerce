@@ -3,6 +3,7 @@ import { StyleSheet, Text, View } from "react-native";
 import { Image } from "react-native-elements/dist/image/Image";
 
 import colors from "../config/colors";
+import { Feather } from "@expo/vector-icons";
 
 export default function CheckoutProduct({ image, title, price }) {
   return (
@@ -30,7 +31,7 @@ export default function CheckoutProduct({ image, title, price }) {
             color: colors.white,
           }}
         >
-          Delete
+          <Feather name="trash-2" size={24} color={colors.black} />
         </Text>
       </View>
     </View>
@@ -48,14 +49,14 @@ const styles = StyleSheet.create({
   product__info: {
     flexDirection: "row",
     justifyContent: "space-between",
-    paddingVertical: 70,
+
     paddingHorizontal: 30,
   },
 
   product__description: {
     // justifyContent: "flex-start",
     alignItems: "center",
-
+    marginBottom: 40,
     flexDirection: "row",
   },
 
