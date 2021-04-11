@@ -76,22 +76,6 @@ const styles = StyleSheet.create({
     backgroundColor: colors.mainScreen,
   },
 
-  categories: {
-    // flexDirection: "row",
-    // flex: 1,
-    marginLeft: 30,
-  },
-
-  categoryLabels: {
-    backgroundColor: colors.white,
-    borderRadius: 50,
-    padding: 18,
-    height: 80,
-    width: 80,
-    justifyContent: "center",
-    alignItems: "center",
-    marginLeft: 30,
-  },
   homeStoreImg: {
     width: "95%",
     height: 182,

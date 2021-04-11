@@ -55,12 +55,6 @@ const styles = StyleSheet.create({
     marginTop: "50%",
     alignItems: "center",
   },
-
-  homeTextColor: {
-    color: "#fff",
-    alignSelf: "center",
-    fontSize: 17,
-  },
 });
 
 export default WelcomeScreen;

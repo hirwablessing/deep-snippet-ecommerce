@@ -60,7 +60,6 @@ const styles = StyleSheet.create({
   productCard: {
     width: cardWidth,
     height: 300, //350
-    // elevation: 5,
     borderRadius: 10,
     backgroundColor: colors.white,
     marginLeft: 20,

@@ -26,9 +26,11 @@ export default function CheckoutProduct({ image, title, price }) {
 
       <View style={styles.product__operations}>
         <View style={styles.product__quantity}>
-          <Text style={styles.product__sign}>-</Text>
-          <Text style={styles.product__sign}>2</Text>
-          <Text style={styles.product__sign}>+</Text>
+          <CustomText textContent="-" textColor={colors.white} />
+
+          <CustomText textContent={2} textColor={colors.white} />
+
+          <CustomText textContent="+" textColor={colors.white} />
         </View>
         <Text
           style={{
@@ -53,7 +55,6 @@ const styles = StyleSheet.create({
   product__info: {
     flexDirection: "row",
     justifyContent: "space-between",
-
     paddingHorizontal: 30,
   },
 
@@ -72,10 +73,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     marginRight: 10,
   },
-  product__sign: {
-    color: colors.white,
-  },
-
   product__operations: {
     justifyContent: "space-evenly",
     flexDirection: "row",

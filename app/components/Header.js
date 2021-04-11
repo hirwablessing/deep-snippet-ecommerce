@@ -13,17 +13,10 @@ export default function Header({ leftText, rightText, titleMargin }) {
       marginLeft: 15,
       alignItems: "baseline",
     },
-    viewText: {
-      color: colors.secondary,
-      fontSize: 15,
-      fontWeight: "300",
-    },
   });
 
   return (
     <View style={styles.homeHeader}>
-      {/* <Text style={styles.categoryText}>{leftText}</Text> */}
-
       <CustomText
         textContent={leftText}
         textColor={colors.primary}
