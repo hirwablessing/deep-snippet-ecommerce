@@ -22,7 +22,7 @@ export default function CheckoutProduct({ image, title, price }) {
 
       <View style={styles.product__operations}>
         <View style={styles.product__quantity}>
-          <Text style={styles.product__sign}>1</Text>
+          <Text style={styles.product__sign}>-</Text>
           <Text style={styles.product__sign}>2</Text>
           <Text style={styles.product__sign}>+</Text>
         </View>
@@ -54,7 +54,6 @@ const styles = StyleSheet.create({
   },
 
   product__description: {
-    // justifyContent: "flex-start",
     alignItems: "center",
     marginBottom: 40,
     flexDirection: "row",

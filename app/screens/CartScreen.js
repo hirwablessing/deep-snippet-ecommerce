@@ -7,6 +7,7 @@ import { Image } from "react-native-elements";
 
 import CheckoutProduct from "../components/CheckoutProduct";
 import { Feather } from "@expo/vector-icons";
+import CustomButton from "../components/CustomButton";
 
 export default function CartScreen() {
   return (
@@ -47,7 +48,40 @@ export default function CartScreen() {
           />
         </View>
 
-        <View style={styles.card__total}></View>
+        <View style={styles.card__total}>
+          <View>
+            <View style={styles.card__totalPrice}>
+              <Text>Total</Text>
+            </View>
+
+            <View style={styles.card__totalPrice}>
+              <Text>Total</Text>
+            </View>
+          </View>
+
+          <View>
+            <View style={styles.card__totalPrice}>
+              <Text>$6,000</Text>
+            </View>
+
+            <View style={styles.card__totalPrice}>
+              <Text>Free</Text>
+            </View>
+          </View>
+        </View>
+
+        <View style={{ alignItems: "center", marginTop: 20 }}>
+          <CustomButton
+            bgColor={colors.secondary}
+            buttonMarginBottom={"7%"}
+            buttonPadding={15}
+            buttonWidth={300}
+            buttonBorderWidth={2}
+            buttonRadius={10}
+            title={"Checkout"}
+            buttonBorderColor={"transparent"}
+          />
+        </View>
       </View>
     </View>
   );
@@ -55,12 +89,20 @@ export default function CartScreen() {
 
 const styles = StyleSheet.create({
   card__total: {
-    flex: 1,
-    marginTop: 70,
-    backgroundColor: colors.secondary,
+    marginTop: 40,
+    color: colors.white,
     borderTopWidth: 1,
-    borderTopColor: colors.white,
+    borderTopColor: colors.gray,
     borderBottomWidth: 1,
-    borderBottomColor: colors.white,
+    borderBottomColor: colors.gray,
+    flexDirection: "row",
+    justifyContent: "space-between",
+    paddingHorizontal: 20,
+    padding: 30,
+  },
+
+  card__totalPrice: {
+    flexDirection: "row",
+    justifyContent: "flex-start",
   },
 });

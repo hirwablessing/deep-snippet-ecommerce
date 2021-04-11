@@ -8,6 +8,7 @@ import { AntDesign } from "@expo/vector-icons";
 
 import colors from "../config/colors";
 import DoubleTap from "./DoubleTap";
+import CustomText from "./CustomText";
 
 const { width } = Dimensions.get("screen");
 const cardWidth = width / 2.2;
@@ -35,10 +36,21 @@ export default function Product() {
 
       <View style={styles.productDetails}>
         <View style={styles.productMenus}>
-          <Text style={styles.productPrice}>$1,047</Text>
-          <Text style={styles.productDescription}>
-            Samsung Galaxy s20 Ultra
-          </Text>
+          {/* <Text style={styles.productPrice}>$1,047</Text> */}
+          <CustomText
+            textContent="$1,047"
+            textColor={colors.primary}
+            textWeight={"900"}
+            textSize={25}
+            textMarginVertical={5}
+          />
+
+          <CustomText
+            textContent="Samsung Galaxy s20 Ultra"
+            textColor={colors.primary}
+            textWeight={"900"}
+            textSize={15}
+          />
         </View>
       </View>
     </View>
@@ -88,16 +100,5 @@ const styles = StyleSheet.create({
     marginTop: 20, //20
     flexDirection: "column",
     lineHeight: 10,
-  },
-  productPrice: {
-    color: colors.primary,
-    fontWeight: "900",
-    fontSize: 20,
-    marginBottom: 5,
-  },
-  productDescription: {
-    color: colors.primary,
-    fontSize: 15,
-    // width: "100%",
   },
 });
