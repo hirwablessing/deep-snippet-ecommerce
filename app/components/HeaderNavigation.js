@@ -3,25 +3,32 @@ import { StyleSheet, Text, View } from "react-native";
 
 import colors from "../config/colors";
 import { AntDesign } from "@expo/vector-icons";
-import CustomText from "./CustomText";
+import CustomButton from "./CustomButton";
 
 export default function HeaderNavigation({ navigationHeaderTitle, rightIcon }) {
   return (
     <View style={styles.homeHeader}>
-      <View style={styles.leftNavigationIcon}>
-        <AntDesign
-          name="left"
-          size={17}
-          color="white"
-          style={{
-            alignSelf: "center",
-          }}
-        />
-      </View>
+      <CustomButton
+        bgColor={colors.primary}
+        btnTextColor={colors.black}
+        buttonWidth={37}
+        buttonHeight={37}
+        buttonRadius={10}
+        title={<AntDesign name="left" size={17} color="white" />}
+        buttonBorderColor={"transparent"}
+      />
 
       <View style={styles.rightContent}>
         <Text style={styles.rightText}>{navigationHeaderTitle}</Text>
-        <View style={styles.rightNavigationIcon}>{rightIcon}</View>
+        <CustomButton
+          bgColor={colors.secondary}
+          btnTextColor={colors.black}
+          buttonWidth={37}
+          buttonHeight={37}
+          buttonRadius={10}
+          title={rightIcon}
+          buttonBorderColor={"transparent"}
+        />
       </View>
     </View>
   );
@@ -38,22 +45,6 @@ const styles = StyleSheet.create({
     fontSize: 15,
     justifyContent: "center",
     alignSelf: "center",
-  },
-  leftNavigationIcon: {
-    height: 37,
-    width: 37,
-    backgroundColor: colors.primary,
-    borderRadius: 10,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  rightNavigationIcon: {
-    height: 37,
-    width: 37,
-    backgroundColor: colors.secondary,
-    borderRadius: 10,
-    alignItems: "center",
-    justifyContent: "center",
   },
   homeHeader: {
     flexDirection: "row",

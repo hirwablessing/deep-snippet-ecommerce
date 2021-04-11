@@ -35,7 +35,7 @@ export default function CheckoutProduct({ image, title, price }) {
             color: colors.white,
           }}
         >
-          <Feather name="trash-2" size={24} color={colors.black} />
+          <Feather name="trash-2" size={24} color={colors.lightBlack} />
         </Text>
       </View>
     </View>
@@ -66,7 +66,7 @@ const styles = StyleSheet.create({
   product__quantity: {
     width: 26,
     height: 68,
-    backgroundColor: colors.black,
+    backgroundColor: colors.lightBlack,
     borderRadius: 26,
     justifyContent: "center",
     alignItems: "center",

@@ -14,13 +14,13 @@ export default function App() {
   return (
     <>
       {/* <HomeStore /> */}
-      <SingleProductScreen
+      {/* <SingleProductScreen
         image={require("./app/assets/image.png")}
         title="Samsung S20 Ultra"
         price={456}
-      />
+      /> */}
 
-      {/* <CartScreen /> */}
+      <CartScreen />
     </>
   );
 }

@@ -16,16 +16,7 @@ export default function SingleProductScreen({ image, title, price }) {
     // <ScrollView>
     <View style={styles.singleProduct}>
       <Image source={image} style={{ width: "80%", height: "55%" }}></Image>
-      <View
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          justifyContent: "space-between",
-          width: "100%",
-          paddingVertical: 30,
-          paddingHorizontal: 50,
-        }}
-      >
+      <View style={styles.singleProduct__details}>
         <View>
           <CustomText
             textContent={title}
@@ -69,22 +60,15 @@ export default function SingleProductScreen({ image, title, price }) {
             ></View>
           </View>
         </View>
-
-        <View
-          style={{
-            backgroundColor: "#E5EAF9",
-            alignItems: "center",
-            justifyContent: "center",
-            width: 80,
-            height: 60,
-          }}
-        >
-          <CustomText
-            textContent={`$${price}`}
-            textWeight={"bold"}
-            textSize={17}
-          />
-        </View>
+        <CustomButton
+          bgColor={colors.lightBlue}
+          btnTextColor={colors.black}
+          buttonWidth={90}
+          buttonHeight={60}
+          buttonBorderWidth={2}
+          title={`$${price}`}
+          buttonBorderColor={"transparent"}
+        />
       </View>
 
       <View
@@ -144,6 +128,14 @@ const styles = StyleSheet.create({
     display: "flex",
     alignItems: "center",
     padding: 10,
+  },
+  singleProduct__details: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between",
+    width: "100%",
+    paddingVertical: 30,
+    paddingHorizontal: 50,
   },
   colorCircle: {
     height: 15,
