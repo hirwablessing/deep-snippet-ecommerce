@@ -5,17 +5,21 @@ export default function CustomText({
   textContent,
   textColor,
   textWeight,
+  textHeight,
   textSize,
   textMarginHorizontal,
   textMarginVertical,
+  textWidth,
 }) {
   const styles = StyleSheet.create({
     text__customStyles: {
       color: textColor,
       fontWeight: textWeight,
+      lineHeight: textHeight,
       fontSize: textSize,
       marginHorizontal: textMarginHorizontal,
       marginVertical: textMarginVertical,
+      width: textWidth,
     },
   });
 

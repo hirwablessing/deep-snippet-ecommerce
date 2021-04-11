@@ -4,6 +4,7 @@ import { Image } from "react-native-elements/dist/image/Image";
 
 import colors from "../config/colors";
 import { Feather } from "@expo/vector-icons";
+import CustomText from "./CustomText";
 
 export default function CheckoutProduct({ image, title, price }) {
   return (
@@ -12,9 +13,12 @@ export default function CheckoutProduct({ image, title, price }) {
         <Image source={image} style={styles.product__image} />
 
         <View>
-          <Text style={{ color: colors.white, width: 100, marginBottom: 10 }}>
-            {title}
-          </Text>
+          <CustomText
+            textContent={title}
+            textColor={colors.white}
+            textWidth={100}
+            textMarginVertical={10}
+          />
 
           <Text style={{ color: colors.secondary }}>${price}</Text>
         </View>

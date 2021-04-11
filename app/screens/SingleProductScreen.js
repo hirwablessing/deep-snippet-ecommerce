@@ -3,12 +3,11 @@ import {
   StyleSheet,
   View,
   Image,
-  Text,
-  ScrollView,
   TouchableWithoutFeedback,
 } from "react-native";
-import { TouchableOpacity } from "react-native-gesture-handler";
+
 import CustomButton from "../components/CustomButton";
+import CustomText from "../components/CustomText";
 
 import colors from "../config/colors";
 
@@ -28,51 +27,46 @@ export default function SingleProductScreen({ image, title, price }) {
         }}
       >
         <View>
-          <Text
-            style={{
-              color: "#2E0B5B",
-              fontWeight: "bold",
-              fontSize: 16,
-              lineHeight: 27,
-            }}
-          >
-            {title}
-          </Text>
-          <Text
-            style={{
-              color: "#706F71",
-              fontSize: 10,
-              fontWeight: "bold",
-              lineHeight: 15,
-            }}
-          >
-            SMARTPHONES
-          </Text>
+          <CustomText
+            textContent={title}
+            textColor={colors.primary}
+            textWeight={"bold"}
+            textSize={16}
+            textMarginVertical={5}
+          />
+
+          <CustomText
+            textContent="SMARTPHONES"
+            textColor={colors.lightGray}
+            textWeight={"bold"}
+            textSize={10}
+            textMarginVertical={5}
+          />
           <View style={{ display: "flex", flexDirection: "row" }}>
-            <Text
+            <View
               style={[
                 styles.colorCircle,
                 {
                   backgroundColor: "#BD3832",
                 },
               ]}
-            ></Text>
-            <Text
+            ></View>
+            <View
               style={[
                 styles.colorCircle,
                 {
                   backgroundColor: "#000000",
                 },
               ]}
-            ></Text>
-            <Text
+            ></View>
+            <View
               style={[
                 styles.colorCircle,
                 {
                   backgroundColor: "#869CAA",
                 },
               ]}
-            ></Text>
+            ></View>
           </View>
         </View>
 
@@ -85,7 +79,11 @@ export default function SingleProductScreen({ image, title, price }) {
             height: 60,
           }}
         >
-          <Text style={{ fontWeight: "bold", fontSize: 17 }}>${price}</Text>
+          <CustomText
+            textContent={`$${price}`}
+            textWeight={"bold"}
+            textSize={17}
+          />
         </View>
       </View>
 
@@ -95,16 +93,13 @@ export default function SingleProductScreen({ image, title, price }) {
           marginVertical: 5,
         }}
       >
-        <Text
-          style={{
-            fontSize: 12,
-            lineHeight: 18,
-          }}
-        >
-          Use, by you or one client, in a single end product which end users are
+        <CustomText
+          textContent="Use, by you or one client, in a single end product which end users are
           not charged for. The total price includest the item price and a buyer
-          fees.
-        </Text>
+          fees."
+          textSize={12}
+          textHeight={18}
+        />
 
         <View style={styles.buttons}>
           <TouchableWithoutFeedback>

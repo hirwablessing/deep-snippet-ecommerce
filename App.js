@@ -13,12 +13,12 @@ import CartScreen from "./app/screens/CartScreen";
 export default function App() {
   return (
     <>
-      <HomeStore />
-      {/* <SingleProductScreen
+      {/* <HomeStore /> */}
+      <SingleProductScreen
         image={require("./app/assets/image.png")}
         title="Samsung S20 Ultra"
         price={456}
-      /> */}
+      />
 
       {/* <CartScreen /> */}
     </>

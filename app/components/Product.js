@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Dimensions } from "react-native";
 import { Image } from "react-native";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, View } from "react-native";
 
 import { EvilIcons } from "@expo/vector-icons";
 import { AntDesign } from "@expo/vector-icons";
@@ -36,7 +36,6 @@ export default function Product() {
 
       <View style={styles.productDetails}>
         <View style={styles.productMenus}>
-          {/* <Text style={styles.productPrice}>$1,047</Text> */}
           <CustomText
             textContent="$1,047"
             textColor={colors.primary}

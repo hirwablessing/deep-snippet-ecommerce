@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import { StyleSheet, Text, TouchableWithoutFeedback, View } from "react-native";
+import { StyleSheet, TouchableWithoutFeedback, View } from "react-native";
 
 import { Feather } from "@expo/vector-icons";
 import colors from "../config/colors";
+import CustomText from "./CustomText";
 
 export default function Category() {
   const [changeCategoryBg, setChangeCategoryBg] = useState(false);
@@ -23,10 +24,6 @@ export default function Category() {
       alignItems: "center",
       color: changeCategoryBg ? "white" : "#B3B3C3",
     },
-    categoryName: {
-      marginTop: 10,
-      alignSelf: "center",
-    },
   });
 
   return (
@@ -41,8 +38,8 @@ export default function Category() {
             />
           </TouchableWithoutFeedback>
         </View>
-        <View>
-          <Text style={styles.categoryName}>Phone</Text>
+        <View style={{ alignSelf: "center" }}>
+          <CustomText textContent="Phone" textMarginVertical={10} />
         </View>
       </>
     </View>

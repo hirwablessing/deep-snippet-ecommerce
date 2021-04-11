@@ -3,6 +3,7 @@ import { StyleSheet, Text, View } from "react-native";
 
 import colors from "../config/colors";
 import { AntDesign } from "@expo/vector-icons";
+import CustomText from "./CustomText";
 
 export default function HeaderNavigation({ navigationHeaderTitle, rightIcon }) {
   return (

@@ -16,7 +16,6 @@ export default function CustomButton({
 }) {
   const styles = StyleSheet.create({
     button: {
-      //   flex: 1,
       backgroundColor: bgColor,
       marginBottom: buttonMarginBottom,
       padding: buttonPadding,
@@ -32,7 +31,6 @@ export default function CustomButton({
       color: btnTextColor ? btnTextColor : colors.white,
       alignSelf: "center",
       fontSize: 17,
-      // textTransform: "capitalize",
     },
   });
   return (

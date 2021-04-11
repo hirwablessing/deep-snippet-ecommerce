@@ -1,13 +1,13 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, View } from "react-native";
 
 import colors from "../config/colors";
 import HeaderNavigation from "../components/HeaderNavigation";
-import { Image } from "react-native-elements";
 
 import CheckoutProduct from "../components/CheckoutProduct";
 import { Feather } from "@expo/vector-icons";
 import CustomButton from "../components/CustomButton";
+import CustomText from "../components/CustomText";
 
 export default function CartScreen() {
   return (
@@ -23,9 +23,13 @@ export default function CartScreen() {
           />
         }
       />
-      <Text style={{ fontSize: 35, marginHorizontal: 40, marginVertical: 50 }}>
-        My Cart
-      </Text>
+
+      <CustomText
+        textContent="My Cart"
+        textSize={35}
+        textMarginHorizontal={40}
+        textMarginVertical={50}
+      />
 
       <View
         style={{
@@ -51,21 +55,21 @@ export default function CartScreen() {
         <View style={styles.card__total}>
           <View>
             <View style={styles.card__totalPrice}>
-              <Text>Total</Text>
+              <CustomText textContent="Total" textColor={colors.white} />
             </View>
 
             <View style={styles.card__totalPrice}>
-              <Text>Total</Text>
+              <CustomText textContent="Delivery" textColor={colors.white} />
             </View>
           </View>
 
           <View>
             <View style={styles.card__totalPrice}>
-              <Text>$6,000</Text>
+              <CustomText textContent="$6,000" textColor={colors.white} />
             </View>
 
             <View style={styles.card__totalPrice}>
-              <Text>Free</Text>
+              <CustomText textContent="Free" textColor={colors.white} />
             </View>
           </View>
         </View>

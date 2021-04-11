@@ -1,6 +1,7 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 import colors from "../config/colors";
+import CustomText from "./CustomText";
 
 export default function Header({ leftText, rightText, titleMargin }) {
   const styles = StyleSheet.create({
@@ -12,11 +13,6 @@ export default function Header({ leftText, rightText, titleMargin }) {
       marginLeft: 15,
       alignItems: "baseline",
     },
-    categoryText: {
-      color: colors.primary,
-      fontSize: 20,
-      fontWeight: "bold",
-    },
     viewText: {
       color: colors.secondary,
       fontSize: 15,
@@ -26,9 +22,21 @@ export default function Header({ leftText, rightText, titleMargin }) {
 
   return (
     <View style={styles.homeHeader}>
-      <Text style={styles.categoryText}>{leftText}</Text>
+      {/* <Text style={styles.categoryText}>{leftText}</Text> */}
 
-      <Text style={styles.viewText}>{rightText}</Text>
+      <CustomText
+        textContent={leftText}
+        textColor={colors.primary}
+        textWeight={"bold"}
+        textSize={20}
+      />
+
+      <CustomText
+        textContent={rightText}
+        textColor={colors.secondary}
+        textWeight={"300"}
+        textSize={15}
+      />
     </View>
   );
 }
