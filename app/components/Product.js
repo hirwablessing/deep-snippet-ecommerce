@@ -13,7 +13,7 @@ import CustomText from "./CustomText";
 const { width } = Dimensions.get("screen");
 const cardWidth = width / 2.2;
 
-export default function Product() {
+export default function Product({ image, name, price }) {
   const [liked, setLiked] = useState(false);
 
   const toggleLike = () => setLiked(!liked);
@@ -28,16 +28,13 @@ export default function Product() {
         )}
       </View>
       <DoubleTap onDoubleTap={toggleLike}>
-        <Image
-          source={require("../assets/image.png")}
-          style={styles.productImage}
-        />
+        <Image source={image} style={styles.productImage} />
       </DoubleTap>
 
       <View style={styles.productDetails}>
         <View style={styles.productMenus}>
           <CustomText
-            textContent="$1,047"
+            textContent={price}
             textColor={colors.primary}
             textWeight={"900"}
             textSize={25}
@@ -45,7 +42,7 @@ export default function Product() {
           />
 
           <CustomText
-            textContent="Samsung Galaxy s20 Ultra"
+            textContent={name}
             textColor={colors.primary}
             textWeight={"900"}
             textSize={15}

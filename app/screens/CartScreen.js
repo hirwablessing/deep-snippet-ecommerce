@@ -10,18 +10,26 @@ import CustomButton from "../components/CustomButton";
 import CustomText from "../components/CustomText";
 
 export default function CartScreen() {
+  const products = [
+    {
+      id: 1,
+      name: "Samsung ultra 2020",
+      price: "$1,333",
+      image: require("../assets/image.png"),
+    },
+    {
+      id: 2,
+      name: "Samsung ultra 2020",
+      price: "$1,333",
+      image: require("../assets/samsung.png"),
+    },
+  ];
+
   return (
     <View style={{ flex: 1, backgroundColor: colors.mainScreen }}>
       <HeaderNavigation
         navigationHeaderTitle={"Add address"}
-        rightIcon={
-          <Feather
-            name="map-pin"
-            size={20}
-            color="white"
-            style={{ alignSelf: "center" }}
-          />
-        }
+        rightIcon={<Feather name="map-pin" size={20} color="white" />}
       />
 
       <CustomText
@@ -40,16 +48,15 @@ export default function CartScreen() {
         }}
       >
         <View style={{ marginTop: 70 }}>
-          <CheckoutProduct
-            image={require("../assets/samsung.png")}
-            title="Galaxy Note 20 Ultra"
-            price={500}
-          />
-          <CheckoutProduct
-            image={require("../assets/samsung.png")}
-            title="Galaxy Note 20 Ultra"
-            price={500}
-          />
+          {products.map((product) => (
+            <CheckoutProduct
+              key={product.id}
+              title={product.name}
+              price={product.price}
+              image={product.image}
+              // onClick={}
+            />
+          ))}
         </View>
 
         <View style={styles.card__total}>

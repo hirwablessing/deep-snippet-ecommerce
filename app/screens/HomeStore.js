@@ -9,6 +9,33 @@ import Header from "../components/Header";
 import Product from "../components/Product";
 
 export default function HomeStore() {
+  const products = [
+    {
+      id: 1,
+      name: "Samsung ultra 2020",
+      price: "$1,333",
+      image: require("../assets/image.png"),
+    },
+    {
+      id: 2,
+      name: "Samsung ultra 2020",
+      price: "$1,333",
+      image: require("../assets/samsung.png"),
+    },
+    {
+      id: 3,
+      name: "Samsung ultra 2020",
+      price: "$1,333",
+      image: require("../assets/image.png"),
+    },
+    {
+      id: 4,
+      name: "Samsung ultra 2020",
+      price: "$1,333",
+      image: require("../assets/samsung.png"),
+    },
+  ];
+
   return (
     <View style={styles.homeStore}>
       <ScrollView horizontal={false} showsHorizontalScrollIndicator={false}>
@@ -60,10 +87,15 @@ export default function HomeStore() {
           titleMargin={15}
         />
         <View style={{ flex: 1, flexDirection: "row", flexWrap: "wrap" }}>
-          <Product />
-          <Product />
-          <Product />
-          <Product />
+          {products.map((product) => (
+            <Product
+              key={product.id}
+              name={product.name}
+              price={product.price}
+              image={product.image}
+              // onClick={}
+            />
+          ))}
         </View>
       </ScrollView>
     </View>
