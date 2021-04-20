@@ -11,15 +11,20 @@ import CustomText from "../components/CustomText";
 
 import colors from "../config/colors";
 
-export default function SingleProductScreen({ image, title, price }) {
+export default function SingleProductScreen({ route, image, title, price }) {
+  const { product } = route.params;
+  console.log(product);
   return (
     // <ScrollView>
     <View style={styles.singleProduct}>
-      <Image source={image} style={{ width: "80%", height: "55%" }}></Image>
+      <Image
+        source={product.image}
+        style={{ width: "80%", height: "55%" }}
+      ></Image>
       <View style={styles.singleProduct__details}>
         <View>
           <CustomText
-            textContent={title}
+            textContent={product.name}
             textColor={colors.primary}
             textWeight={"bold"}
             textSize={16}
@@ -66,7 +71,7 @@ export default function SingleProductScreen({ image, title, price }) {
           buttonWidth={90}
           buttonHeight={60}
           buttonBorderWidth={2}
-          title={`$${price}`}
+          title={`$${product.price}`}
           buttonBorderColor={"transparent"}
         />
       </View>

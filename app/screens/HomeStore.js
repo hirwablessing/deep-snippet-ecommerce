@@ -7,8 +7,9 @@ import Category from "../components/Category";
 import Search from "../components/Search";
 import Header from "../components/Header";
 import Product from "../components/Product";
+import { TouchableWithoutFeedback } from "react-native-gesture-handler";
 
-export default function HomeStore() {
+export default function HomeStore({ navigation }) {
   const products = [
     {
       id: 1,
@@ -88,13 +89,20 @@ export default function HomeStore() {
         />
         <View style={{ flex: 1, flexDirection: "row", flexWrap: "wrap" }}>
           {products.map((product) => (
-            <Product
+            <TouchableWithoutFeedback
               key={product.id}
-              name={product.name}
-              price={product.price}
-              image={product.image}
-              // onClick={}
-            />
+              onPress={() => {
+                console.log("clicked");
+                navigation.push("SingleProduct", { product });
+              }}
+            >
+              <Product
+                name={product.name}
+                price={product.price}
+                image={product.image}
+                title="Go to Details"
+              />
+            </TouchableWithoutFeedback>
           ))}
         </View>
       </ScrollView>
