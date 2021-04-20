@@ -5,7 +5,11 @@ import colors from "../config/colors";
 import { AntDesign } from "@expo/vector-icons";
 import CustomButton from "./CustomButton";
 
-export default function HeaderNavigation({ navigationHeaderTitle, rightIcon }) {
+export default function HeaderNavigation({
+  navigation,
+  navigationHeaderTitle,
+  rightIcon,
+}) {
   return (
     <View style={styles.homeHeader}>
       <CustomButton
@@ -16,6 +20,7 @@ export default function HeaderNavigation({ navigationHeaderTitle, rightIcon }) {
         buttonRadius={10}
         title={<AntDesign name="left" size={17} color="white" />}
         buttonBorderColor={"transparent"}
+        onPress={() => navigation.goBack()}
       />
 
       <View style={styles.rightContent}>

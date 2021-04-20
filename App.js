@@ -1,14 +1,7 @@
 import React from "react";
-import BottomNavigator from "./app/components/BottomNavigator";
-import Product from "./app/components/Product";
-import HomeStore from "./app/screens/HomeStore";
-import WelcomeScreen from "./app/screens/WelcomeScreen";
 
 import { NavigationContainer } from "@react-navigation/native";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import SingleProductScreen from "./app/screens/SingleProductScreen";
-import HeaderNavigation from "./app/components/HeaderNavigation";
-import CartScreen from "./app/screens/CartScreen";
+import Navigation from "./app/routes/Navigation";
 
 export default function App() {
   return (
@@ -20,7 +13,10 @@ export default function App() {
         price={456}
       /> */}
 
-      <CartScreen />
+      {/* <CartScreen /> */}
+      <NavigationContainer>
+        <Navigation />
+      </NavigationContainer>
     </>
   );
 }

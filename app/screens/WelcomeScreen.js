@@ -4,7 +4,7 @@ import { StyleSheet, View, Text, Image } from "react-native";
 import colors from "../config/colors";
 import CustomButton from "../components/CustomButton";
 
-function WelcomeScreen() {
+function WelcomeScreen({ navigation }) {
   return (
     <>
       <View style={styles.container}>
@@ -21,7 +21,8 @@ function WelcomeScreen() {
           buttonBorderWidth={2}
           buttonRadius={0}
           title={"Login"}
-          buttonBorderColor={"secondary"}
+          buttonBorderColor={colors.secondary}
+          onPress={() => navigation.navigate("Store")}
         />
 
         <CustomButton

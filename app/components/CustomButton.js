@@ -14,6 +14,7 @@ export default function CustomButton({
   title,
   buttonBorderColor,
   btnTextColor,
+  onPress,
 }) {
   const styles = StyleSheet.create({
     button: {
@@ -38,7 +39,7 @@ export default function CustomButton({
     },
   });
   return (
-    <TouchableOpacity style={styles.button}>
+    <TouchableOpacity style={styles.button} onPress={onPress}>
       <Text style={styles.buttonTextColor}>{title}</Text>
     </TouchableOpacity>
   );
