@@ -13,7 +13,7 @@ import colors from "../config/colors";
 
 export default function SingleProductScreen({ route, image, title, price }) {
   const { product } = route.params;
-  console.log(product);
+
   return (
     // <ScrollView>
     <View style={styles.singleProduct}>
@@ -126,7 +126,7 @@ export default function SingleProductScreen({ route, image, title, price }) {
 
 const styles = StyleSheet.create({
   singleProduct: {
-    paddingTop: 30,
+    paddingTop: 100,
     backgroundColor: colors.white,
     width: "100%",
     height: "100%",

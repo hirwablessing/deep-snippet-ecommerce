@@ -5,6 +5,7 @@ import WelcomeScreen from "../screens/WelcomeScreen";
 import { createStackNavigator } from "@react-navigation/stack";
 import HeaderNavigation from "../components/HeaderNavigation";
 import SingleProductScreen from "../screens/SingleProductScreen";
+import { Ionicons } from "@expo/vector-icons";
 
 const Stack = createStackNavigator();
 
@@ -29,10 +30,17 @@ export default function Navigation() {
         name="SingleProduct"
         component={SingleProductScreen}
         options={{
-          header: (props) => <HeaderNavigation {...props} />,
-          headerStyle: {
-            backgroundColor: "#f4511e",
-          },
+          header: (props) => (
+            <HeaderNavigation
+              {...props}
+              rightIcon={
+                <Ionicons name="ios-basket-outline" size={22} color="white" />
+              }
+            />
+          ),
+
+          headerShown: true,
+          headerTransparent: true,
         }}
       />
     </Stack.Navigator>

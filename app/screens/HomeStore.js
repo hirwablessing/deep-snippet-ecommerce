@@ -92,7 +92,6 @@ export default function HomeStore({ navigation }) {
             <TouchableWithoutFeedback
               key={product.id}
               onPress={() => {
-                console.log("clicked");
                 navigation.push("SingleProduct", { product });
               }}
             >
